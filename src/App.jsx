@@ -1,5 +1,9 @@
 import { useEffect, useState } from 'react'
-import quizPulseScreenshot from './assets/quizpulse-section.png'
+import prettyzzLanding from './assets/prettyzz-landing.png'
+import quizPulseLanding from './assets/quizpulse-landing.png'
+import savannahLanding from './assets/savannah-landing.png'
+import techStoreLanding from './assets/techstore-landing.png'
+import travelLanding from './assets/travel-landing.png'
 
 const GITHUB = 'https://github.com/replacerog65-dotcom'
 const EMAIL = 'replacerog65@gmail.com'
@@ -34,11 +38,11 @@ function QuizVisual() {
     <figure className="project-visual quiz-visual">
       <img
         className="quiz-screenshot"
-        src={quizPulseScreenshot}
-        alt="Desktop view of the QuizPulse portfolio project section"
+        src={quizPulseLanding}
+        alt="QuizPulse real landing page showing a live classroom quiz experience"
         loading="lazy"
       />
-      <figcaption className="quiz-caption"><span>QuizPulse / portfolio view</span><span>Captured August 2026</span></figcaption>
+      <figcaption className="quiz-caption"><span>QuizPulse / live landing page</span><span>Captured August 2026</span></figcaption>
     </figure>
   )
 }
@@ -81,38 +85,32 @@ function CanvasVisual() {
   )
 }
 
-function ServiceVisual() {
-  return (
-    <div className="service-visual" aria-hidden="true">
-      <div className="service-top"><span>Operations</span><small>August 2026</small></div>
-      <div className="service-stats"><div><small>Bookings</small><b>128</b><i>+12%</i></div><div><small>Revenue</small><b>TSh 4.8m</b><i>+8%</i></div></div>
-      <div className="service-chart"><span style={{height:'36%'}}/><span style={{height:'50%'}}/><span style={{height:'43%'}}/><span style={{height:'72%'}}/><span style={{height:'60%'}}/><span style={{height:'88%'}}/><span style={{height:'78%'}}/></div>
-    </div>
-  )
-}
-
 const smallerProjects = [
   {
     number: '01', title: 'Prettyzz', type: 'Full-stack service platform', className: 'lime',
     description: 'Customer booking, payments, invoices and a complete admin workflow connected to a Laravel REST API.',
-    tech: 'React · Laravel · Sanctum · MySQL', visual: <ServiceVisual />,
+    tech: 'React · Laravel · Sanctum · MySQL', image: prettyzzLanding,
+    imageAlt: 'Prettyzz real landing page for booking home and workplace cleaning services',
   },
   {
     number: '02', title: 'Travel Explorer Tanzania', type: 'Travel discovery experience', className: 'orange',
     description: 'A multi-page, accessible travel interface with search, filters, tour packages and motion that respects user settings.',
-    tech: 'React · TypeScript · Vite',
+    tech: 'React · TypeScript · Vite', image: travelLanding,
+    imageAlt: 'Travel Explorer Tanzania real landing page with a safari scene',
     live: 'https://travel-explorer-tanzania.vercel.app', code: 'https://github.com/replacerog65-dotcom/travel-explorer-tanzania',
   },
   {
     number: '03', title: 'TechStore Tanzania', type: 'E-commerce frontend', className: 'blue',
     description: 'Searchable product catalogue, persistent cart, order calculations and a responsive checkout experience.',
-    tech: 'React · Context API · LocalStorage',
+    tech: 'React · Context API · LocalStorage', image: techStoreLanding,
+    imageAlt: 'TechStore Tanzania real e-commerce landing page',
     live: 'https://techstore-tanzania.vercel.app', code: 'https://github.com/replacerog65-dotcom/techstore-tanzania',
   },
   {
     number: '04', title: 'Savannah Grill', type: 'Hospitality website', className: 'sand',
     description: 'A warm, responsive restaurant experience built around local dishes, clear menus and a simple reservation journey.',
-    tech: 'React · TypeScript · Responsive CSS',
+    tech: 'React · TypeScript · Responsive CSS', image: savannahLanding,
+    imageAlt: 'Savannah Grill real restaurant landing page featuring grilled food',
     live: 'https://restaurant-ruddy-delta-42.vercel.app', code: 'https://github.com/replacerog65-dotcom/Restaurant',
   },
 ]
@@ -245,7 +243,17 @@ function App() {
             {smallerProjects.map((project) => (
               <Reveal className={`build-card ${project.className}`} key={project.title}>
                 <div className="build-card-head"><span>{project.number}</span><small>{project.type}</small></div>
-                {project.visual}
+                {project.live ? (
+                  <a className="build-shot" href={project.live} target="_blank" rel="noreferrer" aria-label={`Open ${project.title} live site`}>
+                    <img src={project.image} alt={project.imageAlt} loading="lazy"/>
+                    <span>View live site <Icon name="external" size={13}/></span>
+                  </a>
+                ) : (
+                  <div className="build-shot">
+                    <img src={project.image} alt={project.imageAlt} loading="lazy"/>
+                    <span>Real project view</span>
+                  </div>
+                )}
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <div className="build-card-foot"><span>{project.tech}</span><ProjectLinks live={project.live} code={project.code}/></div>

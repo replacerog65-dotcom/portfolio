@@ -1240,8 +1240,48 @@ svg {
   border-radius: 50%;
 }
 
+.build-shot {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin: 42px 0 0;
+  border: 1px solid var(--line);
+  aspect-ratio: 8 / 5;
+  background: var(--ink);
+  box-shadow: 10px 10px 0 rgba(23, 35, 29, .12);
+}
+
+.build-shot img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .65s cubic-bezier(.22, 1, .36, 1);
+}
+
+.build-shot:hover img {
+  transform: scale(1.025);
+}
+
+.build-shot > span {
+  position: absolute;
+  right: 13px;
+  bottom: 13px;
+  display: flex;
+  align-items: center;
+  padding: 8px 10px;
+  color: var(--paper);
+  background: rgba(23, 35, 29, .9);
+  font-size: 8px;
+  font-weight: 750;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  gap: 5px;
+}
+
 .build-card h3 {
-  margin: auto 0 12px;
+  margin: 38px 0 12px;
   font-family: var(--display);
   font-size: clamp(38px, 4vw, 55px);
   font-weight: 500;
@@ -1762,6 +1802,8 @@ svg {
   .canvas-head > span { display: none; }
   .module-list > div { min-height: 52px; padding: 7px 8px; }
   .build-card { min-height: 450px; padding: 25px; }
+  .build-shot { margin-top: 30px; box-shadow: 7px 7px 0 rgba(23,35,29,.12); }
+  .build-card h3 { margin-top: 31px; }
   .service-visual { width: 92%; margin-top: 48px; padding: 17px; }
   .build-card-foot { align-items: flex-start; flex-direction: column; }
   .card-links { justify-content: flex-start; }
