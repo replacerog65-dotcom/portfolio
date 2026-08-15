@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import quizPulseScreenshot from './assets/quizpulse-section.png'
 
 const GITHUB = 'https://github.com/replacerog65-dotcom'
 const EMAIL = 'replacerog65@gmail.com'
@@ -30,20 +31,15 @@ function Reveal({ children, className = '' }) {
 
 function QuizVisual() {
   return (
-    <div className="project-visual quiz-visual" aria-label="QuizPulse live session interface illustration">
-      <div className="browser-bar"><span/><span/><span/><small>quizpulse / live</small></div>
-      <div className="quiz-ui">
-        <div className="quiz-topline"><span className="live-dot">Live session</span><strong>08 <small>/ 12</small></strong></div>
-        <p className="question-label">Question 08</p>
-        <h3>Which method helps learners connect new ideas to prior knowledge?</h3>
-        <div className="answers">
-          <div><span>A</span><i style={{'--bar': '78%'}}/><b>78%</b></div>
-          <div><span>B</span><i style={{'--bar': '38%'}}/><b>14%</b></div>
-          <div><span>C</span><i style={{'--bar': '20%'}}/><b>8%</b></div>
-        </div>
-        <div className="quiz-footer"><span><i/> 48 learners connected</span><b>00:24</b></div>
-      </div>
-    </div>
+    <figure className="project-visual quiz-visual">
+      <img
+        className="quiz-screenshot"
+        src={quizPulseScreenshot}
+        alt="Desktop view of the QuizPulse portfolio project section"
+        loading="lazy"
+      />
+      <figcaption className="quiz-caption"><span>QuizPulse / portfolio view</span><span>Captured August 2026</span></figcaption>
+    </figure>
   )
 }
 
