@@ -1,6 +1,6 @@
-# Hamisi James — Portfolio
+# Maduhu Hamisi James — Portfolio
 
-A responsive single-page portfolio for Hamisi James, built with React and Vite. The content is based on his professional CV and current software projects.
+A responsive single-page portfolio for Maduhu Hamisi James, built with React and Vite. The content is based on his professional CV and current software projects.
 
 ## Run locally
 

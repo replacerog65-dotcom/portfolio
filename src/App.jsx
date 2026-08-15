@@ -125,7 +125,7 @@ function Header({ menuOpen, setMenuOpen }) {
   const closeMenu = () => setMenuOpen(false)
   return (
     <header className="site-header">
-      <a className="brand" href="#top" onClick={closeMenu} aria-label="Hamisi James, back to top"><span>HJ</span><b>Hamisi James</b></a>
+      <a className="brand" href="#top" onClick={closeMenu} aria-label="Maduhu Hamisi James, back to top"><span>MHJ</span><b>Maduhu Hamisi James</b></a>
       <nav className={menuOpen ? 'nav-links open' : 'nav-links'} aria-label="Main navigation">
         <a href="#work" onClick={closeMenu}>Work</a>
         <a href="#about" onClick={closeMenu}>About</a>
@@ -176,7 +176,7 @@ function App() {
           <div className="hero-copy">
             <div className="eyebrow"><span/> Instructional technology × software</div>
             <h1>I build digital tools that help people <em>learn and do.</em></h1>
-            <p className="hero-intro">I’m Hamisi James, a developer and instructional technology student at UDOM. I turn learning problems and everyday needs into useful web, mobile and AI products.</p>
+            <p className="hero-intro">I’m Maduhu Hamisi James, a developer and instructional technology student at UDOM. I turn learning problems and everyday needs into useful web, mobile and AI products.</p>
             <div className="hero-actions">
               <a className="button primary" href="#work">Explore my work <Icon name="arrow"/></a>
               <a className="text-link" href={GITHUB} target="_blank" rel="noreferrer"><Icon name="github"/> github.com/replacerog65-dotcom</a>
@@ -296,12 +296,12 @@ function App() {
               <a className="contact-link" href={`tel:${PHONE_NUMBER}`}>Call {PHONE_DISPLAY}</a>
               <a className="contact-link" href={GITHUB} target="_blank" rel="noreferrer"><Icon name="github"/> GitHub</a>
             </div>
-            <div className="contact-mark" aria-hidden="true">HJ</div>
+            <div className="contact-mark" aria-hidden="true">MHJ</div>
           </Reveal>
         </section>
       </main>
       <footer className="footer section-shell">
-        <a className="brand footer-brand" href="#top"><span>HJ</span><b>Hamisi James</b></a>
+        <a className="brand footer-brand" href="#top"><span>MHJ</span><b>Maduhu Hamisi James</b></a>
         <p>Designed and built in Tanzania. <span>© {new Date().getFullYear()}</span></p>
         <div><a href={`mailto:${EMAIL}`}>{EMAIL}</a><a href={`tel:${PHONE_NUMBER}`}>{PHONE_DISPLAY}</a><a href={GITHUB} target="_blank" rel="noreferrer">GitHub <Icon name="external" size={14}/></a><a href="#top">Back to top ↑</a></div>
       </footer>
