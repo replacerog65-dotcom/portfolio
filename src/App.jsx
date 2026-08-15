@@ -213,7 +213,7 @@ function App() {
               <p className="project-lead">A live quiz room that makes classroom participation visible.</p>
               <p>Instructors can launch a session while learners join and answer in real time. I designed the product across the stack, including authenticated REST APIs, WebSocket events, queues and the session architecture behind the live experience.</p>
               <div className="tech-list"><span>React</span><span>Laravel 13</span><span>Redis</span><span>Reverb</span><span>MySQL</span></div>
-              <ProjectLinks />
+              <ProjectLinks live="https://quizpulse-frontend.vercel.app/" />
             </Reveal>
             <Reveal className="visual-wrap"><QuizVisual/></Reveal>
           </article>
